@@ -1,119 +1,36 @@
-# ================================
-# ALLOW ONLY THESE TWO FOLDERS
-# ================================
-
-!/C/
-!/WEB_DEVELOPEMENT/
-
-# And allow everything inside them
-!/C/**
-!/WEB_DEVELOPEMENT/**
-
-# ================================
-# IGNORE EVERYTHING ELSE BY DEFAULT
-# ================================
+# Ignore everything by default
 *
 
-# ================================
-# EXCEPT: keep this file
-# ================================
-!.gitignore
-
-# ================================
-# IGNORE LARGE OR UNNEEDED FOLDERS
-# ================================
-JAVA/
-Youtube/
-my-projects/
-
-# ================================
-# IGNORE BINARY / COMPILED FILES
-# ================================
-*.exe
-*.out
-*.o
-*.dll
-*.jmod
-*.jar
-
-# ================================
-# IGNORE SYSTEM / EDITOR FILES
-# ================================
-.vscode/
-*.png:Zone.Identifier
-*.jpg:Zone.Identifier
-*.zip
-*.tmp
-*.txt.save
-# Ignore everything
-/*
-
-# Allow the gitignore file
+# Keep .gitignore
 !.gitignore
 
 # Allow C folder
 !/C/
 !/C/**
 
-# Allow web dev folder
+# Allow WebDev folder
 !/WEB_DEVELOPEMENT/
 !/WEB_DEVELOPEMENT/**
-# Ignore everything
-*
 
-# Except C folder
-!C/
-
-# Except web development folder
-!WEB_DEVELOPEMENT/
-
-# Except this file
-!.gitignore
-
-# Java JDK
+# Ignore heavy folders
 JAVA/
-
-# YouTube videos
 Youtube/
+my-projects/
+Desktop.rar
+projects.zip
 
-# Executables
+# Ignore binaries
 *.exe
 *.out
 *.o
-
-# DLLs
 *.dll
 *.jmod
 *.jar
 
-# system metadata
-*.png:Zone.Identifier
-*.jpg:Zone.Identifier
-
-# nested repo
-my-projects/
-
-# Compiled binaries
-*.exe
-*.o
-*.out
-
-# Build folders
-*/a.out
-*/output/*.exe
-*/output/*
-
-# VS Code settings
+# VSCode + system junk
 .vscode/
-
-# Windows metadata
+*.zip
+*.tmp
+*.txt.save
 *.png:Zone.Identifier
 *.jpg:Zone.Identifier
-
-# Zip / compressed
-*.zip
-
-# Temporary files
-*.txt.save
-*.tmp
-
