@@ -1,3 +1,15 @@
+# Ignore everything
+*
+
+# Except C folder
+!C/
+
+# Except web development folder
+!WEB_DEVELOPEMENT/
+
+# Except this file
+!.gitignore
+
 # Java JDK
 JAVA/
 
