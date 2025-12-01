@@ -1,0 +1,24 @@
+# Compiled binaries
+*.exe
+*.o
+*.out
+
+# Build folders
+*/a.out
+*/output/*.exe
+*/output/*
+
+# VS Code settings
+.vscode/
+
+# Windows metadata
+*.png:Zone.Identifier
+*.jpg:Zone.Identifier
+
+# Zip / compressed
+*.zip
+
+# Temporary files
+*.txt.save
+*.tmp
+

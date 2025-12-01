@@ -1,0 +1,47 @@
+# Java JDK
+JAVA/
+
+# YouTube videos
+Youtube/
+
+# Executables
+*.exe
+*.out
+*.o
+
+# DLLs
+*.dll
+*.jmod
+*.jar
+
+# system metadata
+*.png:Zone.Identifier
+*.jpg:Zone.Identifier
+
+# nested repo
+my-projects/
+
+# Compiled binaries
+*.exe
+*.o
+*.out
+
+# Build folders
+*/a.out
+*/output/*.exe
+*/output/*
+
+# VS Code settings
+.vscode/
+
+# Windows metadata
+*.png:Zone.Identifier
+*.jpg:Zone.Identifier
+
+# Zip / compressed
+*.zip
+
+# Temporary files
+*.txt.save
+*.tmp
+
