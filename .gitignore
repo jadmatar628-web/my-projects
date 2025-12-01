@@ -1,3 +1,50 @@
+# ================================
+# ALLOW ONLY THESE TWO FOLDERS
+# ================================
+
+!/C/
+!/WEB_DEVELOPEMENT/
+
+# And allow everything inside them
+!/C/**
+!/WEB_DEVELOPEMENT/**
+
+# ================================
+# IGNORE EVERYTHING ELSE BY DEFAULT
+# ================================
+*
+
+# ================================
+# EXCEPT: keep this file
+# ================================
+!.gitignore
+
+# ================================
+# IGNORE LARGE OR UNNEEDED FOLDERS
+# ================================
+JAVA/
+Youtube/
+my-projects/
+
+# ================================
+# IGNORE BINARY / COMPILED FILES
+# ================================
+*.exe
+*.out
+*.o
+*.dll
+*.jmod
+*.jar
+
+# ================================
+# IGNORE SYSTEM / EDITOR FILES
+# ================================
+.vscode/
+*.png:Zone.Identifier
+*.jpg:Zone.Identifier
+*.zip
+*.tmp
+*.txt.save
 # Ignore everything
 /*
 
