@@ -1,4 +1,17 @@
 # Ignore everything
+/*
+
+# Allow the gitignore file
+!.gitignore
+
+# Allow C folder
+!/C/
+!/C/**
+
+# Allow web dev folder
+!/WEB_DEVELOPEMENT/
+!/WEB_DEVELOPEMENT/**
+# Ignore everything
 *
 
 # Except C folder
