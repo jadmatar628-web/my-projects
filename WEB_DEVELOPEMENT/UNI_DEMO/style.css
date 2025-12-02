@@ -246,7 +246,9 @@ main {
 }
 
 
-
+.mid h5{
+  margin-top:10px;
+}
 
 .mid button {
   font-weight: bold;
