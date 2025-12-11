@@ -7,13 +7,10 @@
     };
 int main()
 {
-    struct node *head=NULL;
-    struct node *second=NULL;
-    struct node *third=NULL;
 
-    head=malloc(sizeof(*head));  
-    second = malloc(sizeof(*second));
-    third = malloc(sizeof(*third));
+    struct node *head=malloc(sizeof(*head));  
+    struct node *second = malloc(sizeof(*second));
+    struct node *third = malloc(sizeof(*third));
     head->data=10;
     second->data=40;
     third->data=30;
