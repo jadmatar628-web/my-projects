@@ -1,0 +1,3 @@
+ID: 1
+Name: ALICE Ayre
+Average: 88.50

@@ -13,9 +13,8 @@ typedef struct filmarchive{
     char *address;
     Movie *movie;
 }filmarchive;
-
 int finder(int id, filmarchive *film)
-{
+{ 
     Movie *current= film->movie;
   while(current!=NULL)
   {

@@ -27,11 +27,12 @@ for(int j=0;j<col[i];j++)
 }
 }
     for(int i=0;i<rows;i++)
-    {3
+    {
         for(int j=0;j<col[i];j++)
         {
             printf("%d ",matrix[i][j]);
         }
+        printf("\n");
         free(matrix[i]);
     }
     free(col);

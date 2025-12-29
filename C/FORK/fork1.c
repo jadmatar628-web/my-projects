@@ -9,7 +9,7 @@ int main()
     z=getpid();
     if(!fork){
     x=getpid();}
-    if(!fork){
+    if(!fork){ 
     y=getpid();}
     printf("z=%d\n",z);
     printf("x=%d\n",x);
