@@ -1,10 +1,211 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
 <head>
-    <title>JS Test</title>
+    <title>TITLE</title>
+    <meta charset="utf-8">
+    <viewport content="width=device-width, initial-scale=1">
 </head>
-<body>
 
-<script src="first_js.js"></script>
+<body>
+        <h1>Title 1</h1>
+        <h2>Title 2</h2>
+        <h3>Title 3</h3>
+        <h4>Title 4</h4>
+        <h5>Title 5</h5>
+        <h6>Title 6</h6>
+        <dl>
+            <dt>Title 1</dt>
+            <dd>Details</dd>
+            <dt>Title 2</dt>
+            <dd>Details 2 </dd>
+        </dl>
+        <div class="links">
+        <a href="https://google.com" target="_blank">New Tab Google</a><br>
+         <a href="https://google.com" target="_parent">Samw Tab Google</a>
+    </div>
+
+
+
+    <table  align="center" border="3" cellpadding="10" cellspacing="5" width="250" height="300">
+        <caption>Table of Fruit</caption>
+        <thead>
+            <tr>
+                <th>Fruit</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>0.25$</td>
+            </tr>
+                <td rowspan="2">Orange<br>Banana</td>
+                <td>0.50$</td>
+            </tr>
+            <tr>
+                <td>1.00$</td>
+            </tr>
+            <tr>
+                <td>Pineapple</td>
+                <td>3.00$</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">Total 5.00$</td>
+            </tr>
+        </tbody>
+    </table>
+     <h1>Feedback Form</h1>
+    <p>Please fill out this form to help us improve our website.</p>
+
+    <form method="POST" action="http://www.deitel.com">
+
+        <!-- Hidden inputs -->
+        <input type="hidden" name="recipient" value="deitel@deitel.com">
+        <input type="hidden" name="subject" value="Feedback Form">
+        <input type="hidden" name="redirect" value="main.html">
+
+        <!-- Text field -->
+        <p>
+            Name:
+            <input type="text" name="username">
+        </p>
+
+        <!-- Password field (email masked) -->
+        <p>
+            Email:
+            <input type="password" name="email">
+        </p>
+
+        <!-- Textarea -->
+        <p>
+            Comments:<br>
+            <textarea name="comments" rows="4" cols="36">Enter comments here.</textarea>
+        </p>
+
+        <!-- Checkboxes -->
+        <p>
+            Things you liked:<br>
+            <input type="checkbox" name="liked" value="design"> Site design<br>
+            <input type="checkbox" name="liked" value="links"> Links<br>
+            <input type="checkbox" name="liked" value="ease"> Ease of use<br>
+            <input type="checkbox" name="liked" value="images"> Images<br>
+            <input type="checkbox" name="liked" value="code"> Source code
+        </p>
+
+        <!-- Radio buttons -->
+        <p>
+            How did you get to our site?<br>
+            <input type="radio" name="how" value="search" checked> Search engine<br>
+            <input type="radio" name="how" value="links"> Links from another site<br>
+            <input type="radio" name="how" value="deitel"> Deitel.com Web site<br>
+            <input type="radio" name="how" value="book"> Reference in a book<br>
+            <input type="radio" name="how" value="other"> Other
+        </p>
+
+        <!-- Drop-down list (rating) -->
+        <p>
+            Rate our site:
+            <select name="rating">
+                <option selected>Amazing</option>
+                <option>10</option>
+                <option>9</option>
+                <option>8</option>
+                <option>7</option>
+                <option>6</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+                <option>1</option>
+                <option>Awful</option>
+            </select>
+        </p>
+
+        <!-- Drop-down list with optgroup -->
+        <p>
+            Favorite cars:
+            <select name="cars">
+                <optgroup label="Swedish Cars">
+                    <option>Volvo</option>
+                    <option>Saab</option>
+                </optgroup>
+                <optgroup label="German Cars">
+                    <option>Mercedes</option>
+                    <option>Audi</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <!-- Buttons -->
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+
+    </form>
+ <header>
+        <h1>What Does WWF Do?</h1>
+        <p>
+            WWF works to conserve nature and reduce the most pressing threats to the
+            diversity of life on Earth.
+        </p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">HTML</a> |
+        <a href="#">CSS</a> |
+        <a href="#">JavaScript</a> |
+        <a href="#">jQuery</a>
+    </nav>
+
+    <!-- Aside -->
+    <aside>
+        <h4>Epcot Center</h4>
+        <p>
+            Epcot Center is a theme park at Walt Disney World Resort featuring
+            attractions focused on innovation and international culture.
+        </p>
+    </aside>
+
+    <!-- Figure -->
+    <figure>
+        <img src="camel.png" width="304" height="228" alt="Camel">
+        <figcaption>Fig1. - Camel.</figcaption>
+    </figure>
+
+    <!-- Section -->
+    <section>
+        <h1>WWF</h1>
+        <p>
+            WWF is an international organization working on issues regarding the
+            conservation, research and restoration of the environment.
+        </p>
+
+        <!-- Article 1 -->
+        <article>
+            <h1>What Does WWF Do?</h1>
+            <p>
+                WWF works to stop the degradation of the planet’s natural environment
+                and to build a future in which humans live in harmony with nature.
+            </p>
+        </article>
+
+        <!-- Article 2 -->
+        <article>
+            <h1>What Does WWF Do?</h1>
+            <p>
+                WWF focuses on protecting forests, oceans, freshwater, wildlife,
+                and promoting sustainable practices worldwide.
+            </p>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Posted by WWF Organization</p>
+        <p>
+            Contact information:
+            <a href="mailto:info@wwf.org">info@wwf.org</a>
+        </p>
+    </footer>
 </body>
-</html>
