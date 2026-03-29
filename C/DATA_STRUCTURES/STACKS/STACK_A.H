@@ -14,18 +14,18 @@ typedef struct Stack
 Stack* createStack(int capacity);
 
 // Push element onto stack
-bool push(Stack *stack, int value);
+void push(Stack *stack, int value);
 
 // Pop element from stack
-bool pop(Stack *stack, int *poppedValue);
+int pop(Stack *stack);
 
 // Peek top element
-bool peek(Stack *stack, int *topValue);
+int peek(Stack *stack);
 
 // Check if empty
-bool isEmpty(Stack *stack);
+int isEmpty(Stack *stack);
 
 // Check if full
-bool isFull(Stack *stack);
+int isFull(Stack *stack);
 
 #endif
