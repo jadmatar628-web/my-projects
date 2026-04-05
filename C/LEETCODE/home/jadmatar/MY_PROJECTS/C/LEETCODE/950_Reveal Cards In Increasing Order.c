@@ -100,17 +100,15 @@ for(int i=0;i<deckSize;i++)
     queue->arr[i]=i;
 }
 int* Answer = malloc(deckSize * sizeof(int));
-for(int i=0;i<deckSize;i++)
+for(int i = 0; i < deckSize; i++)
 {
-    Answer[peek(queue)]=deck[i];
-    int valueToMove = peek(queue);
-    dequeue(queue);
-    enqueue(queue, valueToMove);
-    dequeue(queue);
-    if(i==deckSize-1)
-    {
-        Answer[i]=deck[queue->arr[0]];
-        break;
+    int revealIdx = peek(queue);
+    dequeue(queue); 
+    Answer[revealIdx] = deck[i];
+    if (!isEmpty(queue)) {
+        int skipIdx = peek(queue);
+        dequeue(queue);
+        enqueue(queue, skipIdx);
     }
 }
 *returnSize = deckSize;
