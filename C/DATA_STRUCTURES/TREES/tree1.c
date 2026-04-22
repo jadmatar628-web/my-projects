@@ -47,6 +47,12 @@ void postorder(Node * root)
     printf("%d ",root->data);
   
 }
+
+int countnode(Node *root)
+{
+    if(root==NULL) return 0;
+    return 1+countnode(root->left)+countnode(root->right);
+}
 int main()
 {
     Node *tree1=tree();
@@ -55,4 +61,6 @@ int main()
     inorder(tree1);
     printf("\n");
     postorder(tree1);
+    printf("\n");
+    printf("%d",countnode(tree1));
 }
