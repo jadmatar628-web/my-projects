@@ -43,8 +43,8 @@ void postorder(Node * root)
 {
     if(root==NULL) return;
     postorder(root->left);
-    printf("%d ",root->data);
     postorder(root->right);
+    printf("%d ",root->data);
   
 }
 int main()
