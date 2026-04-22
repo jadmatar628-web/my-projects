@@ -21,7 +21,10 @@ Node * tree()
 {
     Node * root=createnode(10);
     root->left=createnode(5);
+    root->left->left=createnode(54);
+    root->left->left->left=createnode(56);
     root->right=createnode(20);
+    root->right->left=createnode(120);
     return root;
 }
 
@@ -53,6 +56,31 @@ int countnode(Node *root)
     if(root==NULL) return 0;
     return 1+countnode(root->left)+countnode(root->right);
 }
+
+int height(Node *root)
+{
+    if(root==NULL) return -1;
+    int MAXLEFT=1+height(root->left);
+    int MAXRIGHT=1+height(root->right);
+    if(MAXLEFT>MAXRIGHT) return MAXLEFT;
+    if(MAXRIGHT>MAXLEFT) 
+    {return MAXRIGHT;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int leafcount(Node *root)
+{
+    if(root==NULL) return 0;
+    if(root->left==NULL && root->right==NULL)
+    {
+        return 1;
+    }
+    return leafcount(root->left)+leafcount(root->right);
+}
 int main()
 {
     Node *tree1=tree();
@@ -63,4 +91,9 @@ int main()
     postorder(tree1);
     printf("\n");
     printf("%d",countnode(tree1));
+    printf("\n");
+    printf("%d",height(tree1));
+    printf("\n");
+    printf("%d",leafcount(tree1));
+
 }
