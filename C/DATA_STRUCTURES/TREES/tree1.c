@@ -1,5 +1,5 @@
 #include<stdlib.h>
-
+#include<stdio.h>
 typedef struct Node
 {
     int data;
@@ -23,4 +23,36 @@ Node * tree()
     root->left=createnode(5);
     root->right=createnode(20);
     return root;
+}
+
+void inorder(Node *root)
+{
+    if(root==NULL) return;
+    inorder(root->left);
+    printf("%d ",root->data);
+    inorder(root->right);
+}
+void preorder (Node *root)
+{
+    if(root==NULL) return;
+    printf("%d ",root->data);
+    preorder(root->left);
+    preorder(root->right);
+}
+void postorder(Node * root)
+{
+    if(root==NULL) return;
+    postorder(root->left);
+    printf("%d ",root->data);
+    postorder(root->right);
+  
+}
+int main()
+{
+    Node *tree1=tree();
+    preorder(tree1);
+    printf("\n");
+    inorder(tree1);
+    printf("\n");
+    postorder(tree1);
 }
