@@ -12,15 +12,10 @@
  *     struct TreeNode *left;
  *     struct TreeNode *right;
  * };
- */
+ */#include<stdlib.h>
 struct TreeNode* invertTree(struct TreeNode* root) 
 {
     if(root==NULL) return root;
-    invertTree(root->left);
-    invertTree(root->right);
-    struct TreeNode* temp=root->left;
-    root->left=root->right;
-    root->right=temp;
     return root;
 }
 // @lc code=end
