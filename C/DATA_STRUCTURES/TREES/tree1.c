@@ -119,6 +119,31 @@ void reversed_postorder_traversal(Node *root)
 }
 }
 
+int tree_height_iteratively(Node * root)
+{
+    Queue q;
+    q=createQueue(50);
+    enqueue(&q,root);
+    int height=-1;
+    while(!iSEmpty(&q))
+    {
+        int level_size=q.size;
+        for(int i=0;i<level_size;i++)
+        {
+        Node *current=dequeue(&q);
+            if(current->left!=NULL) enqueue(&q,current->left);
+            if(current->right!=NULL) enqueue(&q,current->right);
+        }
+        height++;
+    }
+    return height;
+}
+int isIdentical(Node* t1, Node* t2)
+{
+    if (t1 == NULL && t2 == NULL) return 1;
+    if (t1 == NULL || t2 == NULL) return 0;
+    return (t1->data==t2->data && isIdentical(t1->left,t2->left) && isIdentical(t2->left,t2->right));
+}
 int main()
 {
     Node *tree1=tree();
