@@ -1,7 +1,7 @@
 #include "queue.h"
 #include <stdlib.h>
 
-int isEmpty(Queue *q)
+int iSEmpty(Queue *q)
 {
     return q->size == 0;
 }
@@ -41,11 +41,11 @@ void enqueue(Queue *q, int value)
     q->size++;
 }
 
-void dequeue(Queue *q)
+int dequeue(Queue *q)
 {
     if (isEmpty(q))
     {
-        return;
+        return -1;
     }
 
     q->front = (q->front + 1) % q->capacity;
@@ -56,6 +56,7 @@ void dequeue(Queue *q)
         q->front = 0;
         q->rear = -1;
     }
+    return q->front;
 }
 
 int peek(Queue *q)
@@ -66,4 +67,18 @@ int peek(Queue *q)
     }
 
     return q->arr[q->front];
+    
+}
+
+Queue createQueue(int capacity)
+{
+    Queue q;
+
+    q.arr = malloc(capacity * sizeof(int));
+    q.front = 0;
+    q.rear = -1;
+    q.size = 0;
+    q.capacity = capacity;
+
+    return q;
 }

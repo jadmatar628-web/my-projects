@@ -15,4 +15,5 @@ void dequeue(Queue *q);
 int peek(Queue *q);
 int isEmpty(Queue *q);
 int isFull(Queue *q);
+Queue createQueue(int capacity);
 #endif

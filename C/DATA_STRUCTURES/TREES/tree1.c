@@ -1,5 +1,8 @@
 #include<stdlib.h>
 #include<stdio.h>
+#include"STACK_A.H"
+#include "../QUEUES/queue.h"
+
 typedef struct Node
 {
     int data;
@@ -81,6 +84,41 @@ int leafcount(Node *root)
     }
     return leafcount(root->left)+leafcount(root->right);
 }
+
+void deleteTree(Node* root)
+{
+    if(root==NULL) return;
+    deleteTree(root->right);
+    deleteTree(root->left);
+    free(root);
+}
+
+void reversed_postorder_traversal(Node *root)
+{
+    Queue q=createQueue(10);
+    Stack *s=createStack(10);
+    enqueue(&q,root);
+    while(!iSEmpty(q))
+    {
+        Node *curent=dequeue(&q);
+        push(s,current);
+        if(current->right!=NULL)
+        {
+            enqueue(&q,current->right);
+        }
+        if(current->left!=NULL)
+        {
+            enqueue(&q,current->left);
+        }
+
+    }
+    while (!isEmptyStack(&s))
+{
+    Node* curr = pop(&s);
+    printf("%d ", curr->data);
+}
+}
+
 int main()
 {
     Node *tree1=tree();
