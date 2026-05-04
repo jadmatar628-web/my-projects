@@ -1,6 +1,6 @@
 #include<stdlib.h>
 #include<stdio.h>
-#include"STACK_A.H"
+#include"../STACKS/STACK_A.H"
 #include "../QUEUES/queue.h"
 
 typedef struct Node
@@ -71,7 +71,7 @@ int height(Node *root)
     }
     else
     {
-        return 0;
+        return MAXLEFT;
     }
 }
 
@@ -143,6 +143,55 @@ int isIdentical(Node* t1, Node* t2)
     if (t1 == NULL && t2 == NULL) return 1;
     if (t1 == NULL || t2 == NULL) return 0;
     return (t1->data==t2->data && isIdentical(t1->left,t2->left) && isIdentical(t2->left,t2->right));
+}
+
+int level_that_has_the_max_sum(Node *root)
+{
+    Queue q=createQueue(50);
+    enqueue(&q,root);
+    int bestsum=root->data;
+    int bestlevel=0;    
+    int level=0;
+    {
+        while(!iSEmpty(&q))
+        {
+            int level_size=q.size;
+            int current_sum=0;
+            for(int i=0;i<level_size;i++)
+            {
+                Node *current=dequeue(&q);
+                current_sum+=current->data;
+                if(current->left!=NULL) enqueue(&q,current->left);
+                if(current->right!=NULL) enqueue(&q,current->right);
+            }
+                if(current_sum>bestsum)
+                {
+                    bestsum=current_sum;
+                    bestlevel=level;
+                }
+                level++;
+        }
+    } return bestlevel;
+}
+int diameter_height(Node *root, int *diameter)
+{
+    if (root == NULL) return -1;
+
+    int left = diameter_height(root->left, diameter);
+    int right = diameter_height(root->right, diameter);
+
+    int candidate = left + right + 2;
+
+    if (candidate > *diameter)
+        *diameter = candidate;
+
+    return 1 + (left > right ? left : right);
+}
+int diameter(Node *root)
+{
+    int d = 0;
+    diameter_height(root, &d);
+    return d;
 }
 int main()
 {
