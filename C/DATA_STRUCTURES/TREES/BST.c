@@ -62,3 +62,4 @@ int search_BST(Node *root, int value)
     if(root->data>value) return search_BST(root->left,value);
     else return search_BST(root->right,value);
 }
+
